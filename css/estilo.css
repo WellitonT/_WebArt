@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+    overflow-x: hidden;
+}
+section {
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 30%;
+}
+.principal {
+
+    background: url(../imagens/gif1.gif) no-repeat;
+    background-attachment: fixed;
+    background-size: 500px 300px;
+    background-position-x: 30%;
+    background-position-y:20% ;
+    cursor: pointer;
+    display: block;
+    height: 100vh;
+    width: 70%;
+    background-color:#fff;
+}
+.principal .logo {
+    position: absolute;
+    width: 150px;
+    cursor: pointer;
+    margin: 40px 0 0 40px;
+    z-index: 2;
+}
+
+.principal .logo h3 {
+    font-size: 30px;
+    color: #1E96FC;
+    font-weight: bold;
+    transition: 500ms ease;
+}
+.principal .logo.aberto h3{
+    color: #fff;
+}
+.principal .logo span {
+    position: relative;
+    top: 0px;
+    left: 5px;
+    color: #000;
+    transition: .2s ease;
+}
+.principal .logo:hover span {
+    top: -10px;
+}
+
+
+.principal .trabalhos {
+    color: #70C1B3;
+    position:relative;
+    top: 60vh;
+    bottom: 0;
+    margin: 0 0 40px 40px;
+}
+.principal .trabalhos h3 {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+.principal .trabalhos h3::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    background-color: #70C1B3;
+    width: 5%;
+    top: 40px;
+    left: 0;
+    border-radius: 10px;
+}
+.principal .trabalhos p {
+    font-size: 40px;
+    
+    
+}
+
+
+.secundario {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    background-image: url(../imagens/gif3.gif);
+    background-position:center;
+    height: 50vh;
+    position: relative;
+}
+
+.secundario .hamMenu{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 40px 0 0;
+    width: 50px;
+    height: 50px;
+    background-color:#fff;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+    z-index: 2;
+}
+.secundario .hamMenu:hover{
+    transform: scale(1.2);
+}
+.secundario .hamMenu .ham {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #39393A;
+}
+.secundario .hamMenu .ham::before, .secundario .hamMenu .ham::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color:#39393A;
+    transition: .5s ease-in-out;
+}
+.secundario .hamMenu .ham::before{
+    transform: translateY(-6px);
+}
+.secundario .hamMenu .ham::after{
+    transform: translateY(6px);
+}
+
+/*hamMenu aberto*/
+
+.secundario .hamMenu.aberto .ham::before{
+    transform: rotateY();
+    color: #1E96FC;
+}
+
+.secundario .trabalhos {
+    color: #000;
+    position:relative;
+    top: 30vh;
+    bottom: 0;
+    margin: 0 0 40px 40px;
+    letter-spacing: 2px;
+}
+.secundario .trabalhos h3 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.secundario .trabalhos h3::after{
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    height: 5px; 
+    width: 10%;
+    background-color: #000;
+}
+.secundario .trabalhos p {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.terceiro {
+    cursor: pointer;
+    display: block;
+    height: 50vh;
+    position: relative;
+    width: 100%;
+    background-color: #70C1B3;
+    background-image: url(../imagens/gif4.gif);
+    background-repeat: no-repeat;
+    background-size: 300px 200px;
+    background-position-x:80% ;
+    background-position-y:40% ;
+}
+.terceiro .trabalhos {
+    color:#fff;
+    position: relative;
+    top: 30vh;
+    margin: 0 0 40px 40px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.terceiro .trabalhos h3 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.terceiro .trabalhos h3::after{
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    height: 5px; 
+    width: 10%;
+    background-color: #fff;
+}
+.terceiro .trabalhos p {
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.menuEsquerdo {
+    position: absolute;
+    background-color: #7B6D8D;
+    width: 50%;
+    left: -50%;
+    top:0;
+    height: 100vh;
+    transition: 800ms ease;
+}
+.menuDireito {
+    overflow: hidden;
+    position: absolute;
+    background-color: rgb(250, 104, 250);
+    width: 50%;
+    right: -50%;
+    top:0;
+    height: 100vh;
+    transition: 800ms  ease;
+}
+
+.menuEsquerdo.aberto {
+    left: 0;
+}
+.menuDireito.aberto{
+    right: 0;
+}
+
+.menuEsquerdo .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.menuEsquerdo .content h3 {
+    color: #39393A;
+    margin-bottom: 35px;
+}
+.menuEsquerdo .content h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.menuEsquerdo .content .links {
+    margin: 25px;
+    height: 100px;
+}
+.menuEsquerdo .content .links a {
+    cursor: pointer;
+    font-size: 35px;
+    transition: 800ms;
+    margin: 25px;
+}
+.menuEsquerdo .content .links a:hover {
+    color: #EE4266;
+}
+.menuEsquerdo .content .links a.link:hover  {
+    color: blue;
+}
+.menuEsquerdo .content .links a.face:hover  {
+    color: blue;
+}
+
+.menuDireito .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.menuDireito .content h3 {
+    color: #39393A;
+    margin-bottom: 25px;
+}
+.menuDireito .content h2 {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+.menuDireito .content h2:hover{
+    color: #FBD1A2;
+    margin-left: 15px;
+}
+
+/* TRABALHOS */
+
+.trabalhos2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #888;
+}
+.trabalhos2-container {
+
+}
+.trabalhos2-container .texto h4{
+    font-size: 40px;
+    color: #EE4266;
+    margin: 10px 0 50px 0;
+}
+.trabalhos2-container .texto h3 {
+    text-align: left;
+    font-size: 50px;
+    font-weight: lighter;
+    color: #fff;
+    margin: 10px 0 0 0;
+}
+.trabalhos2-container .texto span {
+    text-align: left;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px 0 0 0px;
+}
+
+.trabalhos2 .logo {
+    position: fixed;
+    width: 150px;
+    cursor: pointer;
+    margin: 40px 0 0 40px;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
+.trabalhos2 .logo h3 {
+    font-size: 30px;
+    color: #1E96FC;
+    font-weight: bold;
+    transition: 500ms ease;
+}
+.trabalhos2 .logo.aberto h3{
+    color: #fff;
+}
+.trabalhos2 .logo span {
+    position: relative;
+    top: 0px;
+    left: 5px;
+    color: #000;
+    transition: .2s ease;
+}
+
+.trabalhos2 .logo:hover span {
+    top: -10px;
+}
+
+.trabalhos2 .hamMenu{
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 40px 0 0;
+    width: 50px;
+    height: 50px;
+    background-color:#fff;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+    z-index: 2;
+}
+.trabalhos2 .hamMenu:hover{
+    transform: scale(1.2);
+}
+.trabalhos2 .hamMenu .ham {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #39393A;
+}
+.trabalhos2 .hamMenu .ham::before, .trabalhos2 .hamMenu .ham::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color:#39393A;
+    transition: .5s ease-in-out;
+}
+.trabalhos2 .hamMenu .ham::before{
+    transform: translateY(-6px);
+}
+.trabalhos2 .hamMenu .ham::after{
+    transform: translateY(6px);
+}
+
+.showTrabalhos {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.showTrabalhos .box-video{
+    height: 400px;
+    border: 2px solid #888;
+    border-radius: 10px;
+    width: 50%;
+    background-image: url(../imagens/gif1.gif);
+    background-size: cover;
+}
+.showTrabalhos .box-info {
+    position: absolute;
+    right: 200px;
+    top: 25%;
+    width: 250px;
+    height: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contato{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contato .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+}
+
+.contato .content h3 {
+        color: #39393A;
+        margin-bottom: 35px; 
+}
+.contato .content h2 {
+        font-size: 30px;
+        margin-bottom: 25px;
+}
+.contato .content .links {
+        margin: 25px;
+        height: 100px;
+}
+.contato .content .links a {
+        cursor: pointer;
+        font-size: 35px;
+        transition: 800ms;
+        margin: 25px;
+}
+.contato .content .links a:hover {
+        color: #EE4266;
+}
+.contato .content .links a.link:hover  {
+        color: blue;
+}
+.contato .content .links a.face:hover  {
+        color: blue;
+}

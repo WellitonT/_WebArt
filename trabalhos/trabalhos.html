@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>_WebArt - Trabalhos</title>
+
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+
+    <section class="trabalhos2">
+        <div class="logo">
+            <h3 class="logoH3">_WebArt<span>.</span></h3>
+        </div>
+        <div class="trabalhos2-container">
+            <div class="texto">
+                <h4>Trabalhos</h4>
+                <h3>Website</h3>
+                <h3>Magazine/Blog</h3>
+                <h3>Ecommerce</h3>
+                <span>Soluções Customizadas</span>
+            </div>
+        </div>
+        <div class="hamMenu">
+            <div class="ham"></div>
+        </div>
+        <div class="menuEsquerdo">
+            <div class="content">
+                <h3>Contato</h3>
+                <h2>webArt@gmail.com</h2>
+                <div class="links">
+                    <a><i id="insta"class='bx bxl-instagram'></i></a>
+                    <a class="face"><i class='bx bxl-facebook-square' ></i></a>
+                    <a class="link"><i class='bx bxl-linkedin-square' ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="menuDireito">
+            <div class="content">
+                <h3>Navegação</h3>
+                <h2>Visão</h2>
+                <h2>Trabalhos</h2>
+                <h2>Estúdio</h2>
+            </div>
+        </div>
+    </section>
+    <section class="showTrabalhos">
+        <div class="box-video">
+
+        </div>
+        <div class="box-info">
+            <h3>Site um</h3>
+            <h4>/Website</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem harum et, provident quo in optio veniam eveniet, maiores mollitia porro tenetur deserunt omnis excepturi quam autem eius. Facere, nemo magni?</p>
+            <a class="btn">Visitar</a>
+        </div>
+    </section>
+    <section class="contato">
+        <div class="content">
+            <h3>Contato</h3>
+            <h2>webArt@gmail.com</h2>
+            <div class="links">
+                <a><i id="insta"class='bx bxl-instagram'></i></a>
+                <a class="face"><i class='bx bxl-facebook-square' ></i></a>
+                <a class="link"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        var logo = document.querySelector('.logo');
+        console.log(logo)
+        var btn = document.querySelector('.hamMenu');
+        var menuDireito = document.querySelector('.menuDireito');
+        var menuEsquerdo = document.querySelector('.menuEsquerdo')
+        console.log(menuDireito)
+        btn.addEventListener('click', ()=>{
+            menuDireito.classList.toggle('aberto')
+            menuEsquerdo.classList.toggle('aberto')
+            logo.classList.toggle('aberto')
+        })
+    </script>
+</body>
+</html>

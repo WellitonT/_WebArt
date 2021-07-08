@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebArt</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    
+    <!-- Div principal-->
+    <section class="menu">
+        <div class="principal">
+            <div class="logo">
+                <h3 class="logoH3">_WebArt<span>.</span></h3>
+            </div>
+            <div class="background">
+                
+            </div>
+            <div class="trabalhos">
+                <h3>Trabalhos</h3>
+                <p> Nós criamos websites com padrão de desing funcional e elegante.</p>
+            </div>
+        </div>
+        <div class="direita">
+            <div class="secundario">
+                <div class="hamMenu aberto">
+                    <div class="ham "></div>
+                </div>
+                <div class="trabalhos">
+                    <h3>Visão</h3>
+                    <p>
+                        Nós trazemos projetos com uma clara visão.
+                    </p>
+                </div>
+            </div>
+            <div class="terceiro">
+                <div class="trabalhos">
+                    <h3>Studio</h3>
+                    <p>Nosso ótimo studio de duas pessoas sabe o valor do trabalho árduo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="menuEsquerdo">
+            <div class="content">
+                <h3>Contato</h3>
+                <h2>webArt@gmail.com</h2>
+                <div class="links">
+                    <a><i id="insta"class='bx bxl-instagram'></i></a>
+                    <a class="face"><i class='bx bxl-facebook-square' ></i></a>
+                    <a class="link"><i class='bx bxl-linkedin-square' ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="menuDireito">
+            <div class="content">
+                <h3>Navegação</h3>
+                <h2>Visão</h2>
+                <h2><a href="./trabalhos/trabalhos.html">Trabalhos</a></h2>
+                <h2>Estúdio</h2>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var logo = document.querySelector('.logo');
+        console.log(logo)
+        var btn = document.querySelector('.hamMenu');
+        var menuDireito = document.querySelector('.menuDireito');
+        var menuEsquerdo = document.querySelector('.menuEsquerdo')
+        console.log(menuDireito)
+        btn.addEventListener('click', ()=>{
+            menuDireito.classList.toggle('aberto')
+            menuEsquerdo.classList.toggle('aberto')
+            logo.classList.toggle('aberto')
+        })
+    </script>
+</body>
+</html>
